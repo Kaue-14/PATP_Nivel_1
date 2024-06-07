@@ -17,6 +17,8 @@ class Ui_MainAdmin(object):
         MainWindow.setEnabled(True)
         MainWindow.resize(800, 600)
         MainWindow.setStyleSheet("background-color: rgb(3, 10, 19);")
+        icon = QtGui.QIcon("img/icon.png")
+        MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.cadastra_data = QtWidgets.QFrame(self.centralwidget)
@@ -535,7 +537,7 @@ class Ui_MainAdmin(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Sistema de Agendamento Admin"))
         self.confirmar_data.setText(_translate("MainWindow", "Confirmar"))
         self.txt_nome.setText(_translate("MainWindow", "Nome:"))
         self.txt_cpf.setText(_translate("MainWindow", "CPF:"))
@@ -561,7 +563,6 @@ class Ui_MainAdmin(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    app.setWindowIcon(QtGui.QIcon("img/icon.png"))
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainAdmin()
     ui.setupUi(MainWindow)

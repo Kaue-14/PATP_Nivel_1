@@ -37,6 +37,14 @@ class mainadmin(QtWidgets.QMainWindow):
         # Troca de paginas                                        
         self.ui.btn_agendamentos.clicked.connect(lambda: self.ui.pages.setCurrentWidget(self.ui.pg_agendamentos))
         self.ui.btn_cadastro_users.clicked.connect(lambda: self.ui.pages.setCurrentWidget(self.ui.pg_cadastro_users))
+        
+        # Pegar a data
+        self.ui.calendario.selectionChanged.connect(self.info_data)
+        
+    def info_data(self):
+        data_selecionada = self.ui.calendario.selectedDate()
+        
+        self.ui.date.setDate(data_selecionada)
 
 
 # Starter

@@ -16,6 +16,8 @@ class Ui_Login(object):
         Login.setObjectName("Login")
         Login.resize(442, 392)
         Login.setStyleSheet("background-color: rgb(3, 10, 19);")
+        icon = QtGui.QIcon("img/icon.png")
+        Login.setWindowIcon(icon)
         self.frame = QtWidgets.QFrame(Login)
         self.frame.setGeometry(QtCore.QRect(0, 0, 441, 391))
         self.frame.setStyleSheet("")
@@ -84,7 +86,6 @@ class Ui_Login(object):
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    app.setWindowIcon(QtGui.QIcon("img/icon.png"))
     Login = QtWidgets.QWidget()
     ui = Ui_Login()
     ui.setupUi(Login)
