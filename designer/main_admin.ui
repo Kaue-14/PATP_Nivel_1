@@ -1,0 +1,971 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(3, 10, 19);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="cadastra_data">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>320</y>
+      <width>411</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(3, 10, 19);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="nome">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(255, 255, 255);
+border-radius:  7px;
+</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="confirmar_data">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>230</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0, 0.4);
+color: rgb(255, 255, 255);
+border-radius: 7px;</string>
+     </property>
+     <property name="text">
+      <string>Confirmar</string>
+     </property>
+    </widget>
+    <widget class="QTimeEdit" name="hora_inicio">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>110</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTimeEdit {
+	background-color: rgb(0, 18, 40, .37);
+	color: rgb(255, 255, 255);
+	border-radius:  7px;
+	padding: 7px;
+	letter-spacing: 1.2px;
+}
+
+QTimeEdit::up-button {
+	image: url(:/icon/stat.png);
+}
+
+QTimeEdit::down-button {
+	image: url(:/icon/stat_minus.png);
+}</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="cpf">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(255, 255, 255);
+border-radius:  7px;
+</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="contato">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(255, 255, 255);
+border-radius:  7px;
+</string>
+     </property>
+    </widget>
+    <widget class="QTimeEdit" name="hora_termino">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>170</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTimeEdit {
+	background-color: rgb(0, 18, 40, .37);
+	color: rgb(255, 255, 255);
+	border-radius:  7px;
+	padding: 7px;
+	letter-spacing: 1.2px;
+}
+
+QTimeEdit::up-button {
+	image: url(:/icon/stat.png);
+}
+
+QTimeEdit::down-button {
+	image: url(:/icon/stat_minus.png);
+}</string>
+     </property>
+     <property name="timeSpec">
+      <enum>Qt::LocalTime</enum>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="num_consultorio">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>170</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(255, 255, 255);
+border-radius:  7px;
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="txt_nome">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Nome:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="txt_cpf">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>CPF:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="txt_num_consultorio">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Número do consultorio:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="txt_contato">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>210</y>
+       <width>201</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Número do Celular ou E-mail:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="txt_hora_inicio">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>90</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Hora de inicio:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="txt_hora_final">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>150</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Hora de termino:</string>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="date">
+     <property name="geometry">
+      <rect>
+       <x>260</x>
+       <y>50</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QDateEdit {
+	letter-spacing: 1.2px;
+	background-color: rgb(0, 18, 40, .37);
+	color: rgb(255, 255, 255);
+	border-radius:  7px;
+	padding: 15px;
+}
+
+QDateEdit::up-button {
+	image: none;
+	width: 0;
+	padding: -1000px
+}
+
+QDateEdit::down-button {
+	image: none;
+	width: 0;
+	padding: -1000px
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="txt_data">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>30</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 8pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Data</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sistema_data">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>0</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 11pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Cadastrar Consulta:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="tela_btn">
+    <property name="geometry">
+     <rect>
+      <x>419</x>
+      <y>-1</y>
+      <width>381</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(2, 13, 27);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="btn_agendamentos">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>5</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0, 0.4);
+color: rgb(255, 255, 255);
+border-radius: 7px;</string>
+     </property>
+     <property name="text">
+      <string>Agendamento</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btn_cadastro_users">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>5</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0, 0.4);
+color: rgb(255, 255, 255);
+border-radius: 7px;</string>
+     </property>
+     <property name="text">
+      <string>Cadastro de Usuarío</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QStackedWidget" name="pages">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>30</y>
+      <width>381</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(3, 10, 19);</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="pg_agendamentos">
+     <widget class="QLabel" name="Data_sel">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>221</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;JetBrains Mono&quot;;
+
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Data Selecionada:</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pg_cadastro_users">
+     <widget class="QLabel" name="c_titulo">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>10</y>
+        <width>201</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 13pt &quot;JetBrains Mono&quot;;
+
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>Cadastro de Usuarío:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="c_nome">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>130</y>
+        <width>341</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>JetBrains Mono</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(255, 255, 255);
+border-radius:  7px;
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="c_cpf">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>210</y>
+        <width>341</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>JetBrains Mono</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(255, 255, 255);
+border-radius:  7px;
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="c_senha">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>290</y>
+        <width>341</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>JetBrains Mono</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(255, 255, 255);
+border-radius:  7px;
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="c_senha_confirmar">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>370</y>
+        <width>341</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>JetBrains Mono</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(255, 255, 255);
+border-radius:  7px;
+</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="confirmar_cadastro">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>520</y>
+        <width>341</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>JetBrains Mono</family>
+       </font>
+      </property>
+      <property name="cursor">
+       <cursorShape>PointingHandCursor</cursorShape>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0, 0.4);
+color: rgb(255, 255, 255);
+border-radius: 7px;</string>
+      </property>
+      <property name="text">
+       <string>Confirmar</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_admin">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>470</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>JetBrains Mono</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox {
+	letter-spacing: 1.2px;
+	background-color: rgb(0, 18, 40, .37);
+	color: rgb(255, 255, 255);
+	border-radius:  7px;
+	padding: 15px
+ }
+
+QCheckBox::indicator {
+	width: 18px;
+	height: 18px;
+	image: url(:/icon/checkbox_unchecked.ico);
+}
+
+QCheckBox::indicator:checked {
+	width: 18px;
+	height: 180px;
+	image: url(:/icon/checkbox_indeterminate.ico);
+}</string>
+      </property>
+      <property name="text">
+       <string>O Usuário é Funcionário</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="check_normal">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>420</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>JetBrains Mono</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QCheckBox {
+	letter-spacing: 1.2px;
+	background-color: rgb(0, 18, 40, .37);
+	color: rgb(255, 255, 255);
+	border-radius:  7px;
+	padding: 15px
+ }
+
+QCheckBox::indicator {
+	width: 18px;
+	height: 18px;
+	image: url(:/icon/checkbox_unchecked.ico);
+}
+
+QCheckBox::indicator:checked {
+	width: 18px;
+	height: 180px;
+	image: url(:/icon/checkbox_indeterminate.ico);
+}</string>
+      </property>
+      <property name="text">
+       <string>O Usuarío é Paciente</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="text_c_nome">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Nome:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="text_c_nome_2">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>190</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>CPF:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="text_c_nome_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>260</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Senha:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="text_c_nome_4">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>340</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 12pt &quot;JetBrains Mono&quot;;
+background-color: rgba(0, 0, 0, 0);
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>Confirmar Senha:</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QCalendarWidget" name="calendario">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>419</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>JetBrains Mono</family>
+     </font>
+    </property>
+    <property name="focusPolicy">
+     <enum>Qt::NoFocus</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/* Definição de cor para vários elementos dentro do QCalendarWidget */
+QCalendarWidget QSpinBox#qt_calendar_yearedit,
+QCalendarWidget QSpinBox#qt_calendar_monthedit,
+QCalendarWidget QToolButton#qt_calendar_monthbutton,
+QCalendarWidget QToolButton#qt_calendar_yearbutton,
+QCalendarWidget QTableView#qt_calendar_calendarview,
+QCalendarWidget QMenu, 
+#calendarWidget QToolButton QMenu {
+    color: rgb(255, 255, 255);
+    selection-color: rgb(255, 255, 255);
+}
+
+/* Definição de cor para a janela de seleção de mês */
+QCalendarWidget QMenu {
+    background-color: rgb(0, 18, 35);
+}
+
+/* Definição de cores e estilos para a barra de navegação e visualização do calendário */
+QCalendarWidget QWidget#qt_calendar_navigationbar,
+#qt_calendar_calendarview {
+    background-color: rgb(3, 10, 19);
+    alternate-background-color: rgba(0, 18, 40, 0.37);
+    selection-background-color: rgb(0, 18, 35);
+}
+
+/* Definição de estilos para os botões de navegação do calendário */
+QCalendarWidget QWidget#qt_calendar_prevmonth,
+QCalendarWidget QWidget#qt_calendar_nextmonth {
+    border: none;
+    qproperty-icon: none;
+    min-height: 13px;
+    min-width: 13px;
+    max-height: 13px;
+    max-width: 13px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: transparent;
+}
+
+/* Definição de ícones para os botões de navegação do calendário */
+QCalendarWidget QWidget#qt_calendar_prevmonth {
+    margin-left: 5px;
+    image: url(:/icon/chevron_left.png);
+}
+
+QCalendarWidget QWidget#qt_calendar_nextmonth {
+    margin-right: 5px;
+    image: url(:/icon/chevron_right.png);
+}
+
+/* Estilização dos botões de navegação quando pressionados */
+QCalendarWidget QWidget#qt_calendar_prevmonth:pressed,
+QCalendarWidget QWidget#qt_calendar_nextmonth:pressed {
+    background-color: rgb(0, 18, 40);
+}
+
+/* Estilização dos botões de mês e ano quando o mouse passa sobre eles */
+QCalendarWidget QToolButton#qt_calendar_monthbutton:hover,
+QCalendarWidget QToolButton#qt_calendar_yeamutton:hover {
+    background-color: rgb(0, 18, 35);
+}
+
+/* Estilização dos botões de mês e ano quando pressionados */
+QCalendarWidget QToolButton#qt_calendar_monthbutton:pressed,
+QCalendarWidget QToolButton#qt_calendar_yeamutton:pressed {
+    background-color: rgb(0, 18, 35);
+}
+
+/* Estilização dos botões de ano */
+QCalendarWidget QToolButton#qt_calendar_yearbutton {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 13px;
+}
+
+/* Estilização dos botões de mês */
+QCalendarWidget QToolButton#qt_calendar_monthbutton {
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 0px 2px;
+    font-size: 13px;
+    width: 90px;
+    color: rgb(255, 255, 255);
+}
+
+/* Estilização do campo de edição do ano */
+#qt_calendar_yearedit {
+    min-width: 53px;
+    background: transparent;
+    font-size: 13px;
+}
+
+/* Definição de ícones e estilos para os botões de aumento e diminuição do ano */
+#qt_calendar_yearedit::down-button {
+    subcontrol-position: left;
+    image: url(:/icon/stat_minus.png);
+}
+
+#qt_calendar_yearedit::up-button {
+    subcontrol-position: right;
+    image: url(:/icon/stat.png);
+}
+
+#qt_calendar_yearedit::up-button,
+#qt_calendar_yearedit::down-button {
+    width: 10px;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+
+/* Estilização dos botões de aumento e diminuição do ano quando o mouse passa sobre eles */
+#qt_calendar_yearedit::up-button:hover,
+#qt_calendar_yearedit::down-button:hover {
+    background-color: rgb(0, 18, 35);
+}
+
+/* Estilização dos botões de aumento e diminuição do ano quando pressionados */
+#qt_calendar_yearedit::up-button:pressed,
+#qt_calendar_yearedit::down-button:pressed {
+    background-color: rgb(0, 18, 35);
+}
+
+/* Estilização do menu suspenso dentro do QCalendarWidget */
+#calendarWidget QToolButton QMenu {
+    background-color: rgb(0, 18, 35);
+}
+
+/* Estilização da visualização do calendário */
+#qt_calendar_calendarview {
+    border: 5px solid rgb(2, 13, 27);
+    border-top: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../img/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
