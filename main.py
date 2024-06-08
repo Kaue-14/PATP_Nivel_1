@@ -4,6 +4,7 @@ import sys
 # Qt designer
 from designer.login import Ui_Login
 from designer.main_admin import Ui_MainAdmin
+from designer.main_users import Ui_MainUsers
 
 # Janela de Login
 class login(QtWidgets.QMainWindow):
@@ -15,9 +16,16 @@ class login(QtWidgets.QMainWindow):
         # botão de login
         self.ui.btn_login.clicked.connect(self.abrir_admin_sempre)
     
+    # Abrir as janelas main
     def abrir_admin_sempre(self):
-        if self.ui.input_senha.text() == "admin" and self.ui.input_usuario == "admin":
+        # janela de main admin
+        if self.ui.input_senha.text() == "admin" and self.ui.input_usuario.text() == "admin":
             self.m = mainadmin()
+            self.m.show()
+            self.close()
+        # janela de main users
+        elif self.ui.input_senha.text() == "paciente" and self.ui.input_senha.text() == "paciente":
+            self.m = mainusers()
             self.m.show()
             self.close()
         # bypass remover dps que finalizar
@@ -25,8 +33,18 @@ class login(QtWidgets.QMainWindow):
             self.m = mainadmin()
             self.m.show()
             self.close()
-            
-     
+
+#  Janela de users
+class mainusers(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(mainusers, self).__init__()
+        self.ui = Ui_MainUsers()
+        self.ui.setupUi(self)
+        
+        # Troca de paginas                                        
+        self.ui.btn_calendario.clicked.connect(lambda: self.ui.pages_users.setCurrentWidget(self.ui.pg_calendario))
+        self.ui.btn_consultas.clicked.connect(lambda: self.ui.pages_users.setCurrentWidget(self.ui.pg_consultas))
+        
 # Janela de Admin
 class mainadmin(QtWidgets.QMainWindow):
     def __init__(self):
