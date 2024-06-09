@@ -205,8 +205,7 @@ class Ui_MainAdmin(object):
         self.tela_btn.setFrameShadow(QtWidgets.QFrame.Raised)
         self.tela_btn.setObjectName("tela_btn")
         self.btn_agendamentos = QtWidgets.QPushButton(self.tela_btn)
-        self.btn_agendamentos.setGeometry(QtCore.QRect(10, 5, 171, 21))
-        self.btn_agendamentos.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_agendamentos.setGeometry(QtCore.QRect(10, 5, 151, 21))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -220,8 +219,7 @@ class Ui_MainAdmin(object):
 "border-radius: 7px;")
         self.btn_agendamentos.setObjectName("btn_agendamentos")
         self.btn_cadastro_users = QtWidgets.QPushButton(self.tela_btn)
-        self.btn_cadastro_users.setGeometry(QtCore.QRect(200, 5, 171, 21))
-        self.btn_cadastro_users.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.btn_cadastro_users.setGeometry(QtCore.QRect(170, 5, 151, 21))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -234,6 +232,18 @@ class Ui_MainAdmin(object):
 "color: rgb(255, 255, 255);\n"
 "border-radius: 7px;")
         self.btn_cadastro_users.setObjectName("btn_cadastro_users")
+        self.voltar_login = QtWidgets.QPushButton(self.tela_btn)
+        self.voltar_login.setGeometry(QtCore.QRect(350, 1, 31, 21))
+        font = QtGui.QFont()
+        font.setFamily("JetBrains Mono")
+        self.voltar_login.setFont(font)
+        self.voltar_login.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.voltar_login.setStyleSheet("letter-spacing: 1.2px;\n"
+"background-color: rgb(0, 18, 40, .37);\n"
+"color: rgb(170, 0, 0);\n"
+"border-radius:  7px;\n"
+"")
+        self.voltar_login.setObjectName("voltar_login")
         self.pages = QtWidgets.QStackedWidget(self.centralwidget)
         self.pages.setEnabled(True)
         self.pages.setGeometry(QtCore.QRect(420, 30, 381, 571))
@@ -534,7 +544,7 @@ class Ui_MainAdmin(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.pages.setCurrentIndex(1)
+        self.pages.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -551,6 +561,7 @@ class Ui_MainAdmin(object):
         self.sistema_data.setText(_translate("MainWindow", "Cadastrar Consulta:"))
         self.btn_agendamentos.setText(_translate("MainWindow", "Agendamento"))
         self.btn_cadastro_users.setText(_translate("MainWindow", "Cadastro de Usuarío"))
+        self.voltar_login.setText(_translate("MainWindow", "X"))
         self.Data_sel.setText(_translate("MainWindow", "Data Selecionada:"))
         self.c_titulo.setText(_translate("MainWindow", "Cadastro de Usuarío:"))
         self.confirmar_cadastro.setText(_translate("MainWindow", "Confirmar"))

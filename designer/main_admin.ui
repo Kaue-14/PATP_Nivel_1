@@ -424,7 +424,7 @@ color: rgb(255, 255, 255);</string>
       <rect>
        <x>10</x>
        <y>5</y>
-       <width>171</width>
+       <width>151</width>
        <height>21</height>
       </rect>
      </property>
@@ -451,9 +451,9 @@ border-radius: 7px;</string>
     <widget class="QPushButton" name="btn_cadastro_users">
      <property name="geometry">
       <rect>
-       <x>200</x>
+       <x>170</x>
        <y>5</y>
-       <width>171</width>
+       <width>151</width>
        <height>21</height>
       </rect>
      </property>
@@ -475,6 +475,34 @@ border-radius: 7px;</string>
      </property>
      <property name="text">
       <string>Cadastro de Usuarío</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="voltar_login">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>1</y>
+       <width>31</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>JetBrains Mono</family>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">letter-spacing: 1.2px;
+background-color: rgb(0, 18, 40, .37);
+color: rgb(170, 0, 0);
+border-radius:  7px;
+</string>
+     </property>
+     <property name="text">
+      <string>X</string>
      </property>
     </widget>
    </widget>

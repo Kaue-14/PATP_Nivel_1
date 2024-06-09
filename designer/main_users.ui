@@ -127,10 +127,10 @@ border-radius:  7px;
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="pg_calendario">
-     <widget class="QCalendarWidget" name="calendarWidget">
+     <widget class="QCalendarWidget" name="calendario">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -143,6 +143,9 @@ border-radius:  7px;
        <font>
         <family>JetBrains Mono</family>
        </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
       </property>
       <property name="styleSheet">
        <string notr="true">/* Definição de cor para vários elementos dentro do QCalendarWidget */
@@ -663,44 +666,24 @@ QCheckBox::indicator:checked {
        </property>
       </widget>
      </widget>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QFrame" name="frame_3">
       <property name="geometry">
        <rect>
-        <x>190</x>
-        <y>0</y>
+        <x>189</x>
+        <y>-1</y>
         <width>611</width>
-        <height>560</height>
+        <height>561</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>JetBrains Mono</family>
-       </font>
-      </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(3, 10, 19);
-border:none;</string>
+       <string notr="true">background-color: rgb(3, 10, 19);</string>
       </property>
-      <column>
-       <property name="text">
-        <string>nome</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>cpf</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>num_consultorio</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>contato</string>
-       </property>
-      </column>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
      </widget>
     </widget>
    </widget>

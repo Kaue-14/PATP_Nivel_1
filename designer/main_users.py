@@ -15,6 +15,7 @@ class Ui_MainUsers(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(800, 599)
+        MainWindow.setStyleSheet("background-color: rgb(3, 10, 19);")
         icon = QtGui.QIcon("img/icon.png")
         MainWindow.setWindowIcon(icon)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -66,12 +67,13 @@ class Ui_MainUsers(object):
         self.pages_users.setObjectName("pages_users")
         self.pg_calendario = QtWidgets.QWidget()
         self.pg_calendario.setObjectName("pg_calendario")
-        self.calendarWidget = QtWidgets.QCalendarWidget(self.pg_calendario)
-        self.calendarWidget.setGeometry(QtCore.QRect(0, 0, 801, 561))
+        self.calendario = QtWidgets.QCalendarWidget(self.pg_calendario)
+        self.calendario.setGeometry(QtCore.QRect(0, 0, 801, 561))
         font = QtGui.QFont()
         font.setFamily("JetBrains Mono")
-        self.calendarWidget.setFont(font)
-        self.calendarWidget.setStyleSheet("/* Definição de cor para vários elementos dentro do QCalendarWidget */\n"
+        self.calendario.setFont(font)
+        self.calendario.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.calendario.setStyleSheet("/* Definição de cor para vários elementos dentro do QCalendarWidget */\n"
 "QCalendarWidget QSpinBox#qt_calendar_yearedit,\n"
 "QCalendarWidget QSpinBox#qt_calendar_monthedit,\n"
 "QCalendarWidget QToolButton#qt_calendar_monthbutton,\n"
@@ -207,7 +209,7 @@ class Ui_MainUsers(object):
 "    border-bottom-right-radius: 5px;\n"
 "}\n"
 "")
-        self.calendarWidget.setObjectName("calendarWidget")
+        self.calendario.setObjectName("calendario")
         self.pages_users.addWidget(self.pg_calendario)
         self.pg_consultas = QtWidgets.QWidget()
         self.pg_consultas.setObjectName("pg_consultas")
@@ -417,24 +419,12 @@ class Ui_MainUsers(object):
 "    image: url(img/checkbox_indeterminate.ico);\n"
 "}")
         self.check_nome.setObjectName("check_nome")
-        self.tableWidget = QtWidgets.QTableWidget(self.pg_consultas)
-        self.tableWidget.setGeometry(QtCore.QRect(190, 0, 611, 560))
-        font = QtGui.QFont()
-        font.setFamily("JetBrains Mono")
-        self.tableWidget.setFont(font)
-        self.tableWidget.setStyleSheet("background-color: rgb(3, 10, 19);\n"
-"border:none;")
-        self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(4)
-        self.tableWidget.setRowCount(0)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, item)
-        item = QtWidgets.QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, item)
+        self.frame_3 = QtWidgets.QFrame(self.pg_consultas)
+        self.frame_3.setGeometry(QtCore.QRect(189, -1, 611, 561))
+        self.frame_3.setStyleSheet("background-color: rgb(3, 10, 19);")
+        self.frame_3.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_3.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_3.setObjectName("frame_3")
         self.pages_users.addWidget(self.pg_consultas)
         MainWindow.setCentralWidget(self.centralwidget)
 
@@ -456,15 +446,6 @@ class Ui_MainUsers(object):
         self.check_num_consultorio.setText(_translate("MainWindow", "   Consultorio:"))
         self.check_cpf.setText(_translate("MainWindow", "   CPF:"))
         self.check_nome.setText(_translate("MainWindow", "   Nome:"))
-        item = self.tableWidget.horizontalHeaderItem(0)
-        item.setText(_translate("MainWindow", "nome"))
-        item = self.tableWidget.horizontalHeaderItem(1)
-        item.setText(_translate("MainWindow", "cpf"))
-        item = self.tableWidget.horizontalHeaderItem(2)
-        item.setText(_translate("MainWindow", "num_consultorio"))
-        item = self.tableWidget.horizontalHeaderItem(3)
-        item.setText(_translate("MainWindow", "contato"))
-
 
 if __name__ == "__main__":
     import sys
