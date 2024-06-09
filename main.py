@@ -84,13 +84,28 @@ class mainadmin(QtWidgets.QMainWindow):
         # Volta pra tela de login
         self.ui.voltar_login.clicked.connect(self.volta_login)
         
+        # Escolha entre Paciente e Funcionario
+        self.ui.check_admin.clicked.connect(self.prioradide_user)
+        self.ui.check_normal.clicked.connect(self.prioradide_user)
+                
         # Pegar a data
         self.ui.calendario.selectionChanged.connect(self.info_data)
+    
+    # Alterar entre as checkbox paciente e funcionario
+    def prioradide_user(self):
+        if self.ui.check_admin == self.ui.check_admin.setChecked(True):
+            self.ui.check_normal.setChecked(False)
+        elif self.ui.check_normal == self.ui.check_normal.setChecked(True):
+            self.ui.check_admin.setChecked(False)
+            
+            
+        
     
     # Colocar a data
     def info_data(self):
         data_selecionada = self.ui.calendario.selectedDate()
         self.ui.date.setDate(data_selecionada)
+        self.ui.date_2.setDate(data_selecionada)
 
     # Volta pra tela de login
     def volta_login(self):

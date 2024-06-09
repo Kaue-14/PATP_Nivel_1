@@ -532,19 +532,56 @@ border-radius:  7px;
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>10</y>
         <width>221</width>
-        <height>31</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 12pt &quot;JetBrains Mono&quot;;
+       <string notr="true">font: 16pt &quot;JetBrains Mono&quot;;
 
 color: rgb(255, 255, 255);
 background-color: rgba(255, 255, 255, 0);</string>
       </property>
       <property name="text">
        <string>Data Selecionada:</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="date_2">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>10</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>JetBrains Mono</family>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QDateEdit {
+	letter-spacing: 1.2px;
+	background-color: rgb(0, 18, 40, .37);
+	color: rgb(255, 255, 255);
+	border-radius:  7px;
+	padding: 15px;
+}
+
+QDateEdit::up-button {
+	image: none;
+	width: 0;
+	padding: -1000px
+}
+
+QDateEdit::down-button {
+	image: none;
+	width: 0;
+	padding: -1000px
+}
+</string>
       </property>
      </widget>
     </widget>

@@ -253,12 +253,38 @@ class Ui_MainAdmin(object):
         self.pg_agendamentos = QtWidgets.QWidget()
         self.pg_agendamentos.setObjectName("pg_agendamentos")
         self.Data_sel = QtWidgets.QLabel(self.pg_agendamentos)
-        self.Data_sel.setGeometry(QtCore.QRect(0, 0, 221, 31))
-        self.Data_sel.setStyleSheet("font: 12pt \"JetBrains Mono\";\n"
+        self.Data_sel.setGeometry(QtCore.QRect(0, 10, 221, 41))
+        self.Data_sel.setStyleSheet("font: 16pt \"JetBrains Mono\";\n"
 "\n"
 "color: rgb(255, 255, 255);\n"
 "background-color: rgba(255, 255, 255, 0);")
         self.Data_sel.setObjectName("Data_sel")
+        self.date_2 = QtWidgets.QDateEdit(self.pg_agendamentos)
+        self.date_2.setGeometry(QtCore.QRect(240, 10, 121, 41))
+        font = QtGui.QFont()
+        font.setFamily("JetBrains Mono")
+        self.date_2.setFont(font)
+        self.date_2.setStyleSheet("QDateEdit {\n"
+"    letter-spacing: 1.2px;\n"
+"    background-color: rgb(0, 18, 40, .37);\n"
+"    color: rgb(255, 255, 255);\n"
+"    border-radius:  7px;\n"
+"    padding: 15px;\n"
+"}\n"
+"\n"
+"QDateEdit::up-button {\n"
+"    image: none;\n"
+"    width: 0;\n"
+"    padding: -1000px\n"
+"}\n"
+"\n"
+"QDateEdit::down-button {\n"
+"    image: none;\n"
+"    width: 0;\n"
+"    padding: -1000px\n"
+"}\n"
+"")
+        self.date_2.setObjectName("date_2")
         self.pages.addWidget(self.pg_agendamentos)
         self.pg_cadastro_users = QtWidgets.QWidget()
         self.pg_cadastro_users.setObjectName("pg_cadastro_users")
