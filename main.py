@@ -59,6 +59,12 @@ class mainusers(QtWidgets.QMainWindow):
         # Pegar a data
         self.ui.calendario.selectionChanged.connect(self.info_data)
         
+        # Opções de pesquisas
+        self.ui.check_nome.clicked.connect(self.pesquisa_nome)
+        self.ui.check_cpf.clicked.connect(self.pesquisa_cpf)
+        self.ui.check_num_consultorio.clicked.connect(self.pesquisa_consultorio)
+        self.ui.check_contato.clicked.connect(self.pesquisa_contato)
+        
     # Volta pra tela de login
     def volta_login(self):
         self.l = login()
@@ -69,6 +75,35 @@ class mainusers(QtWidgets.QMainWindow):
     def info_data(self):
         data_selecionada = self.ui.calendario.selectedDate()
         self.ui.date1.setDate(data_selecionada)
+        
+    # Opções de pesquisa
+    def pesquisa_nome(self):
+        
+        # Desativar as outras CheckBox
+        self.ui.check_cpf.setChecked(False)
+        self.ui.check_num_consultorio.setChecked(False)
+        self.ui.check_contato.setChecked(False)
+    
+    def pesquisa_cpf(self):
+        
+        # Desativar as outras CheckBox
+        self.ui.check_nome.setChecked(False)
+        self.ui.check_num_consultorio.setChecked(False)
+        self.ui.check_contato.setChecked(False)
+    
+    def pesquisa_consultorio(self):
+        
+        # Desativar as outras CheckBox
+        self.ui.check_nome.setChecked(False)
+        self.ui.check_cpf.setChecked(False)
+        self.ui.check_contato.setChecked(False)
+    
+    def pesquisa_contato(self):
+        
+        # Desativar as outras CheckBox
+        self.ui.check_nome.setChecked(False)
+        self.ui.check_cpf.setChecked(False)
+        self.ui.check_num_consultorio.setChecked(False)
         
 # Janela de Admin
 class mainadmin(QtWidgets.QMainWindow):
@@ -85,22 +120,19 @@ class mainadmin(QtWidgets.QMainWindow):
         self.ui.voltar_login.clicked.connect(self.volta_login)
         
         # Escolha entre Paciente e Funcionario
-        self.ui.check_admin.clicked.connect(self.prioradide_user)
         self.ui.check_normal.clicked.connect(self.prioradide_user)
+        self.ui.check_admin.clicked.connect(self.prioradide_admin)
                 
         # Pegar a data
         self.ui.calendario.selectionChanged.connect(self.info_data)
     
     # Alterar entre as checkbox paciente e funcionario
     def prioradide_user(self):
-        if self.ui.check_admin == self.ui.check_admin.setChecked(True):
-            self.ui.check_normal.setChecked(False)
-        elif self.ui.check_normal == self.ui.check_normal.setChecked(True):
-            self.ui.check_admin.setChecked(False)
-            
-            
+        self.ui.check_admin.setChecked(False)
         
-    
+    def prioradide_admin(self):
+        self.ui.check_normal.setChecked(False)
+            
     # Colocar a data
     def info_data(self):
         data_selecionada = self.ui.calendario.selectedDate()
