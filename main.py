@@ -125,7 +125,7 @@ class mainadmin(QtWidgets.QMainWindow):
                 
         # Pegar a data
         self.ui.calendario.selectionChanged.connect(self.info_data)
-    
+
     # Alterar entre as checkbox paciente e funcionario
     def prioradide_user(self):
         self.ui.check_admin.setChecked(False)
