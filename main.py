@@ -53,9 +53,6 @@ class mainusers(QtWidgets.QMainWindow):
         # Troca de pagina ao selecionar data
         self.ui.calendario.selectionChanged.connect(lambda: self.ui.pages_users.setCurrentWidget(self.ui.pg_consultas))
         
-        # Volta pra tela de login
-        self.ui.voltar_login.clicked.connect(self.volta_login)
-        
         # Pegar a data
         self.ui.calendario.selectionChanged.connect(self.info_data)
         
@@ -64,13 +61,7 @@ class mainusers(QtWidgets.QMainWindow):
         self.ui.check_cpf.clicked.connect(self.pesquisa_cpf)
         self.ui.check_num_consultorio.clicked.connect(self.pesquisa_consultorio)
         self.ui.check_contato.clicked.connect(self.pesquisa_contato)
-        
-    # Volta pra tela de login
-    def volta_login(self):
-        self.l = login()
-        self.l.show()
-        self.close()
-        
+                
     # Colocar a data
     def info_data(self):
         data_selecionada = self.ui.calendario.selectedDate()
@@ -116,9 +107,6 @@ class mainadmin(QtWidgets.QMainWindow):
         self.ui.btn_agendamentos.clicked.connect(lambda: self.ui.pages.setCurrentWidget(self.ui.pg_agendamentos))
         self.ui.btn_cadastro_users.clicked.connect(lambda: self.ui.pages.setCurrentWidget(self.ui.pg_cadastro_users))
         
-        # Volta pra tela de login
-        self.ui.voltar_login.clicked.connect(self.volta_login)
-        
         # Escolha entre Paciente e Funcionario
         self.ui.check_normal.clicked.connect(self.prioradide_user)
         self.ui.check_admin.clicked.connect(self.prioradide_admin)
@@ -138,12 +126,6 @@ class mainadmin(QtWidgets.QMainWindow):
         data_selecionada = self.ui.calendario.selectedDate()
         self.ui.date.setDate(data_selecionada)
         self.ui.date_2.setDate(data_selecionada)
-
-    # Volta pra tela de login
-    def volta_login(self):
-        self.l = login()
-        self.l.show()
-        self.close()
 
 # Starter
 if __name__ == "__main__":

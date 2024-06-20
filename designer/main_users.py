@@ -50,18 +50,6 @@ class Ui_MainUsers(object):
 "border-radius:  7px;\n"
 "")
         self.btn_consultas.setObjectName("btn_consultas")
-        self.voltar_login = QtWidgets.QPushButton(self.frame)
-        self.voltar_login.setGeometry(QtCore.QRect(760, 10, 31, 23))
-        font = QtGui.QFont()
-        font.setFamily("JetBrains Mono")
-        self.voltar_login.setFont(font)
-        self.voltar_login.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.voltar_login.setStyleSheet("letter-spacing: 1.2px;\n"
-"background-color: rgb(0, 18, 40, .37);\n"
-"color: rgb(170, 0, 0);\n"
-"border-radius:  7px;\n"
-"")
-        self.voltar_login.setObjectName("voltar_login")
         self.pages_users = QtWidgets.QStackedWidget(self.centralwidget)
         self.pages_users.setGeometry(QtCore.QRect(-1, 39, 801, 561))
         self.pages_users.setObjectName("pages_users")
@@ -437,7 +425,6 @@ class Ui_MainUsers(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Sistema de Agendamento"))
         self.btn_calendario.setText(_translate("MainWindow", "Calendario"))
         self.btn_consultas.setText(_translate("MainWindow", "Consultas"))
-        self.voltar_login.setText(_translate("MainWindow", "X"))
         self.pesquisar.setText(_translate("MainWindow", "Pesquisar"))
         self.p_consulta.setText(_translate("MainWindow", "Procurar por Consulta:"))
         self.data_sel1.setText(_translate("MainWindow", "Data Selecionda:"))
