@@ -7,7 +7,7 @@ Esse projeto foi desenvolvido como parte da disciplina **PROJETO DE APERFEIÇOAM
 
 ## 🚀 Sobre o Projeto
 
-Este sistema simples possui uma interface gráfica desenvolvida com **PyQt5**. Ele simula um sistema de login com áreas distintas para **usuários comuns** e **administradores**.
+Este sistema simples possui uma interface gráfica desenvolvida com **PyQt5**. Ele simula um Sistema de Agendamento com áreas distintas para **usuários comuns** e **administradores**.
 
 Foi meu primeiro contato com:
 - Interface gráfica com **Qt Designer**
