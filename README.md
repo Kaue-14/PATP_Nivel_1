@@ -7,7 +7,7 @@ Esse projeto foi desenvolvido como parte da disciplina **PROJETO DE APERFEIÇOAM
 
 ## 🚀 Sobre o Projeto
 
-Este sistema simples possui uma interface gráfica desenvolvida com **PyQt5**. Ele simula um Sistema de Agendamento com áreas distintas para **usuários comuns** e **administradores**.
+Este sistema foi desenvolvido com **PyQt5** e simula um **sistema de agendamento**, onde usuários e administradores podem interagir através de uma interface gráfica.
 
 Foi meu primeiro contato com:
 - Interface gráfica com **Qt Designer**
@@ -19,10 +19,11 @@ Foi meu primeiro contato com:
 
 ## 🧩 Funcionalidades
 
-- 🔐 Tela de login  
-- 👤 Interface para usuários comuns  
-- 🛠️ Interface para administradores  
-- ✨ Interface visual moderna feita com `.ui` (Qt Designer)
+- 🔐 Tela de login com autenticação básica  
+- 📅 Agendamento de compromissos  
+- 🧾 Visualização dos agendamentos feitos  
+- 👤 Acesso diferenciado para usuários e administradores  
+- ✨ Interface gráfica amigável e feita com `.ui` (Qt Designer)
 
 ---
 
